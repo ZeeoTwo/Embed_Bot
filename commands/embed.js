@@ -3,8 +3,8 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName("embed")
-		.setDescription("Show Embed")
+		.setName("embed-add")
+		.setDescription("Create Embed")
 		// Alt Title
 		.addStringOption((option) =>
 			option
