@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
+const { user_channel } = require('../config.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -48,7 +49,7 @@ module.exports = {
 		const u_image_link = interaction.options.getString("image_link");
 
 		const guild = interaction.guild;
-		const channel = guild.channels.cache.get("1027981553122418768");
+		const channel = guild.channels.cache.get(user_channel);
 		const exampleEmbed = new EmbedBuilder()
 			.setTitle(u_name)
 			.setColor(0x0099ff)

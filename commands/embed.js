@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
-
+const { embed_channel } = require('../config.json');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("embed-add")
@@ -112,7 +112,7 @@ module.exports = {
 		const e_rate = interaction.options.getString("rate");
 
 		const guild = interaction.guild;
-		const channel = guild.channels.cache.get("1027865140357505044");
+		const channel = guild.channels.cache.get(embed_channel);
 		const exampleEmbed = new EmbedBuilder()
 			.setTitle(e_alt_title)
 			.setColor(0x0099ff)
