@@ -1,0 +1,32 @@
+/embed
+title: Asahi-senpai no Okiniiri 
+alt_title: あさひ先輩のお気にいり
+volumes: 2/?
+type: Manga
+genre: Romans, dramat, okruchy życia, szkolne,
+author: Machino Iroha
+release_date: 2017
+opinion: 'Brak danych'
+description: Matsuri miała spokojne życie... Dopóki nie poznała przyjaciela jej starszego brata, Asahiego Ryunosuke, w niespodziewanych okolicznościach. Po wielu dziwnych wydarzeniach bardzo się do siebie zbliżyli. I tak mijają jej dni z super popularnym Asahim-senpai, który uwielbia jej dokuczać.
+mangadex: https://mangadex.org/title/5fc789b2-cd7e-4b49-9c29-d35e009fc8f9 
+download: https://mega.nz/folder/841ExQgR#UYN3WfPi7dFnfikIJ-s2rQ
+rate: https://docs.google.com/forms/d/1lyIEmdkjp1cS42xubp_6WbDmWYOCqObVNhftASuIlhQ/viewform?edit_requested=true"
+image_link: https://cdn.discordapp.com/attachments/908421286504579112/908421585034158160/4c0ad963-a6da-448c-9d3e-276d570d2f64.png 
+
+
+
+ping person
+People
+
+Nazwa uzytkownika
+
+Rola
+
+Krótki opis
+
+Zdjęcie(miniaturka)
+
+
+
+/embed-edit message_id:  1027967381219315823  option: Autor content: co chesz wpisac
+
