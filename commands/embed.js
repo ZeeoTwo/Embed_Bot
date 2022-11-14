@@ -129,7 +129,6 @@ module.exports = {
 				{ name: "Oceń mangę", value: e_rate },
 			)
 			.setImage(e_image_link);
-		console.log(exampleEmbed);
 		channel.send({ content: "**" + e_title + "**", embeds: [exampleEmbed] });
 		await interaction.reply("Created Embed");
 	},
