@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
-
+const { channels } = require("../config.json");
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("embed-edit-u")
@@ -31,8 +31,9 @@ module.exports = {
 				.setRequired(true)
 		),
 	async execute(interaction) {
+		let guild = interaction.guild;
 		let edit_msgId = interaction.options.getString("id");
-		let channel = await interaction.channel.fetch();
+		let channel = await guild.channels.fetch(channels.user_channel);
 
 		function editEmb(msg) {
 			let copy_Embed = msg.embeds[0];

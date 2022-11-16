@@ -1,10 +1,23 @@
 const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
-const { embed_channel } = require('../config.json');
+const { channels } = require('../config.json');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("embed-add")
 		.setDescription("Create Embed")
+		// Channel
+		.addStringOption((option) =>
+			option
+				.setName("channel")
+				.setDescription("Kanał na który ma być wysłany embed")
+				.setRequired(true)
+				.addChoices(
+					{ name: "embed_channel", value: channels.embed_channel },
+					{ name: "oneshot_channel", value: channels.oneshot_channel },
+					{ name: "finished_channel", value: channels.finished_channel },
+					{ name: "lic_channel", value: channels.lic_channel },
+				)
+		)
 		// Alt Title
 		.addStringOption((option) =>
 			option
@@ -112,7 +125,7 @@ module.exports = {
 		const e_rate = interaction.options.getString("rate");
 
 		const guild = interaction.guild;
-		const channel = guild.channels.cache.get(embed_channel);
+		const channel = guild.channels.cache.get(interaction.options.getString("channel"));
 		const exampleEmbed = new EmbedBuilder()
 			.setTitle(e_alt_title)
 			.setColor(0x0099ff)

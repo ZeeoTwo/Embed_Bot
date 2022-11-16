@@ -46,6 +46,11 @@ Zdjęcie(miniaturka)
 
 
 
-/embed-u-add username:TEST userid:12345 role:TEST ROLE description:TEST DESC image_link:https://cdn.discordapp.com/avatars/929143184175554642/fdefea2db22ab8f166191f74c6a3b920.png
+/embed-u-add username:TEST userid:12345 role:TEST ROLE description:TEST DESC image_link:https://cdn.discordapp.com/attachments/908829954622521394/908831883989774416/Avek_v2.png
 
 /embed-edit-u id:1028018450364387440 field:username content:ZeeoTwo
+
+
+// CREATE INVITE EMBED COMMAND{ name: "invite_channel", value: channels.invite_channel },
+
+zaproszenia okami cos takiego

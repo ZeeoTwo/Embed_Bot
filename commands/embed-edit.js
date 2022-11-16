@@ -1,11 +1,24 @@
 /* eslint-disable prefer-const */
 const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
-
+const { channels } = require("../config.json");
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("embed-edit")
 		.setDescription("Edit Embed")
+		// Channel
+		.addStringOption((option) =>
+			option
+				.setName("channel")
+				.setDescription("Kanał na którym ma być zedytowany embed")
+				.setRequired(true)
+				.addChoices(
+					{ name: "embed_channel", value: channels.embed_channel },
+					{ name: "oneshot_channel", value: channels.oneshot_channel },
+					{ name: "finished_channel", value: channels.finished_channel },
+					{ name: "lic_channel", value: channels.lic_channel },
+				)
+		)
 		.addStringOption((option) =>
 			option
 				.setName("id")
@@ -40,9 +53,9 @@ module.exports = {
 				.setRequired(true)
 		),
 	async execute(interaction) {
+		let guild = interaction.guild;
 		let edit_msgId = interaction.options.getString("id");
-		let channel = await interaction.channel.fetch();
-
+		let channel = await guild.channels.fetch(channels.embed_channel);
 
 		function editEmb(msg) {
 			let copy_Embed = msg.embeds[0];

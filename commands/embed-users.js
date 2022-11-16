@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
-const { user_channel } = require('../config.json');
+const { channels } = require('../config.json');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -24,21 +24,21 @@ module.exports = {
 		.addStringOption((option) =>
 			option
 				.setName("role")
-				.setDescription("Nazwa Użytkownika")
+				.setDescription("Rola Użytkownika")
 				.setRequired(true)
 		)
 	// Description
 		.addStringOption((option) =>
 			option
 				.setName("description")
-				.setDescription("Nazwa Użytkownika")
+				.setDescription("Opis")
 				.setRequired(true)
 		)
 	// Image(Thumbnail)
 		.addStringOption((option) =>
 			option
 				.setName("image_link")
-				.setDescription("Nazwa Użytkownika")
+				.setDescription("Link do zdjęcia")
 				.setRequired(true)
 		),
 	async execute(interaction) {
@@ -49,7 +49,7 @@ module.exports = {
 		const u_image_link = interaction.options.getString("image_link");
 
 		const guild = interaction.guild;
-		const channel = guild.channels.cache.get(user_channel);
+		const channel = guild.channels.cache.get(channels.user_channel);
 		const exampleEmbed = new EmbedBuilder()
 			.setTitle(u_name)
 			.setColor(0x0099ff)
