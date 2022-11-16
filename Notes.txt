@@ -13,35 +13,6 @@ download: https://mega.nz/folder/841ExQgR#UYN3WfPi7dFnfikIJ-s2rQ
 rate: https://docs.google.com/forms/d/1lyIEmdkjp1cS42xubp_6WbDmWYOCqObVNhftASuIlhQ/viewform?edit_requested=true
 image_link: https://cdn.discordapp.com/attachments/908421286504579112/908421585034158160/4c0ad963-a6da-448c-9d3e-276d570d2f64.png 
 
-
-
-
-
-Główny Admin
-Typesetter, QC
-Jam jest Książe Mroku, Pesip I Wielki. Jam Alfa i Omega swiata Mroku, strzeż się! Mą siostrą Krwawa Klątwa.
-Oprócz mang, lubię też anime i gry :slight_smile:
-
-„Są rzeczy ważne, ważniejsze i jest też Genshin oraz Czołgi :triumph: ”.
-
-
-https://cdn.discordapp.com/attachments/908829954622521394/908831883989774416/Avek_v2.png 
-
-
-
-ping person
-People
-
-Nazwa uzytkownika
-
-Rola
-
-Krótki opis
-
-Zdjęcie(miniaturka)
-
-
-
 /embed-edit message_id:  1027967381219315823  option: Autor content: co chesz wpisac
 
 /embed-u-add username:TEST userid:12345 role:TEST ROLE description:TEST DESC image_link:https://cdn.discordapp.com/attachments/908829954622521394/908831883989774416/Avek_v2.png
