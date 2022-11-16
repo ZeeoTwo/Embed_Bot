@@ -36,10 +36,12 @@ module.exports = {
 		),
 	async execute(interaction) {
 		let edit_msgId = interaction.options.getString("id");
-		let channel = await interaction.channel.fetch(user_channel);
+		let channel = await interaction.channel.fetch();
 
 		function editEmb(msg) {
+			// console.log(msg);
 			let copy_Embed = msg.embeds[0];
+			// let good_embed = EmbedBuilder.from(copy_Embed);
 			let good_embed = new EmbedBuilder()
 				.setTitle(copy_Embed.data.title)
 				.setColor(0x0099ff)
@@ -67,11 +69,13 @@ module.exports = {
 				// IMAGE_LINK
 				good_embed.setImage(interaction.options.getString('content'));
 			}
-			copy_Embed = good_embed;
 			return good_embed;
 		}
 		// const ms = await interaction.editMessage(edit_msgId, { embeds: [editEmb()] });
-		channel.messages.fetch(edit_msgId).then(message => message.edit({ embeds: [editEmb(message)] }), console.log('UPDATED'));
+		// let mess = channel.messages.fetch(edit_msgId);
+		// mess.send(" ").then(message => message.edit({ embeds: [editEmb(message)] }), console.log('UPDATED'));
+		// channel.messages.fetch({ limit: 1, cache: false, around: edit_msgId }).then(message => { const msg = message.values().next().value; msg.edit({ embeds: [editEmb(msg)] }) }, console.log('UPDATED'));
+		channel.messages.fetch(edit_msgId).then(message => message.edit({ embeds: [editEmb(message)] }), channel.messages.cache.clear(), console.log('UPDATED'));
 		// let message = channel.messages.fetch(edit_msgId).then(mes => editEmb(mes));
 		// message.edit({ embeds: [editEmb(message)] }).then(msg => console.log('Updated EMBED'));
 		await interaction.reply("Edited User Embed");
