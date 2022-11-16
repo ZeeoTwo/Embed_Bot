@@ -1,19 +1,15 @@
 /* eslint-disable prefer-const */
-/* eslint-disable no-unused-vars */
-const { SlashCommandBuilder, Message } = require("discord.js");
+const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("discord.js");
-const { user_channel } = require('../config.json');
-
-let is_ready = true;
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("embed-edit-u")
-		.setDescription("Create User Embed")
+		.setDescription("Edit User Embed")
 		.addStringOption((option) =>
 			option
 				.setName("id")
-				.setDescription("Id Wiadomości")
+				.setDescription("Message Id")
 				.setRequired(true)
 		)
 		.addStringOption((option) =>
@@ -31,7 +27,7 @@ module.exports = {
 		.addStringOption((option) =>
 			option
 				.setName("content")
-				.setDescription("content zmiany")
+				.setDescription("Change Content")
 				.setRequired(true)
 		),
 	async execute(interaction) {
@@ -39,9 +35,7 @@ module.exports = {
 		let channel = await interaction.channel.fetch();
 
 		function editEmb(msg) {
-			// console.log(msg);
 			let copy_Embed = msg.embeds[0];
-			// let good_embed = EmbedBuilder.from(copy_Embed);
 			let good_embed = new EmbedBuilder()
 				.setTitle(copy_Embed.data.title)
 				.setColor(0x0099ff)
@@ -71,13 +65,9 @@ module.exports = {
 			}
 			return good_embed;
 		}
-		// const ms = await interaction.editMessage(edit_msgId, { embeds: [editEmb()] });
-		// let mess = channel.messages.fetch(edit_msgId);
-		// mess.send(" ").then(message => message.edit({ embeds: [editEmb(message)] }), console.log('UPDATED'));
-		// channel.messages.fetch({ limit: 1, cache: false, around: edit_msgId }).then(message => { const msg = message.values().next().value; msg.edit({ embeds: [editEmb(msg)] }) }, console.log('UPDATED'));
+
 		channel.messages.fetch(edit_msgId).then(message => message.edit({ embeds: [editEmb(message)] }), channel.messages.cache.clear(), console.log('UPDATED'));
-		// let message = channel.messages.fetch(edit_msgId).then(mes => editEmb(mes));
-		// message.edit({ embeds: [editEmb(message)] }).then(msg => console.log('Updated EMBED'));
+
 		await interaction.reply("Edited User Embed");
 	},
 };
