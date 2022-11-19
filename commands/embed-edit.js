@@ -55,7 +55,7 @@ module.exports = {
 	async execute(interaction) {
 		let guild = interaction.guild;
 		let edit_msgId = interaction.options.getString("id");
-		let channel = await guild.channels.fetch(channels.embed_channel);
+		let channel = await guild.channels.fetch(interaction.options.getString("channel"));
 
 		function editEmb(msg) {
 			let copy_Embed = msg.embeds[0];
