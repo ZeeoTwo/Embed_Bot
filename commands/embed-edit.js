@@ -219,7 +219,7 @@ module.exports = {
 					{ name: "Pobierz", value: copy_Embed.data.fields[8].value },
 					{ name: "Oceń mangę", value: interaction.options.getString('content') },
 				);
-			}	else if (interaction.options.getString('field') == 'image_link') {
+			}	else if (interaction.options.getString('field') == 'img_link') {
 				// Image Link
 				good_embed.setImage(interaction.options.getString('content'));
 			}

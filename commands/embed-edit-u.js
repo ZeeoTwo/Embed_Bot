@@ -60,7 +60,7 @@ module.exports = {
 					{ name: "Rola", value: copy_Embed.data.fields[0].value, },
 					{ name: "Opis", value: interaction.options.getString('content'), },
 				);
-			}	else if (interaction.options.getString('field') == 'image_link') {
+			}	else if (interaction.options.getString('field') == 'img_link') {
 				// IMAGE_LINK
 				good_embed.setImage(interaction.options.getString('content'));
 			}
