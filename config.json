@@ -1,14 +1,14 @@
 {
-    "clientId" : "1057332994253271101",
-    "guildId" : "375767338168877056",
-    "token" : "MTA1NzMzMjk5NDI1MzI3MTEwMQ.GjY0W0.2F7hms7W6Cq-iAxz_J3RfWCYrPqSq5HN_s6aqM",
+    "clientId" : "Application ID",
+    "guildId" : "Guild ID",
+    "token" : "Bot token",
     "channels": {
-        "user_channel" : "886636163622899762",
-        "embed_channel" : "886634511906009168",
-        "oneshot_channel" : "908415518262853672",
-        "invite_channel" : "886637584791506964",
-        "finished_channel" : "886636246691090482",
-        "lic_channel" : "886636596353454160"
+        "user_channel" : "Channel ID",
+        "embed_channel" : "Channel ID",
+        "oneshot_channel" : "Channel ID",
+        "invite_channel" : "Channel ID",
+        "finished_channel" : "Channel ID",
+        "lic_channel" : "Channel ID"
     },
-    "role_id" : "475433805369442304"
+    "role_id" : "ID OF ROLE WHICH CAN USE BOT COMMANDS"
 }
