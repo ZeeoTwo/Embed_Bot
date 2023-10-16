@@ -17,6 +17,7 @@ module.exports = {
 					{ name: "oneshot_channel", value: channels.oneshot_channel },
 					{ name: "finished_channel", value: channels.finished_channel },
 					{ name: "lic_channel", value: channels.lic_channel },
+					{ name: "planned_channel", value: channels.planned_channel },
 				)
 		)
 		.addStringOption((option) =>

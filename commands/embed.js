@@ -16,6 +16,7 @@ module.exports = {
 					{ name: "oneshot_channel", value: channels.oneshot_channel },
 					{ name: "finished_channel", value: channels.finished_channel },
 					{ name: "lic_channel", value: channels.lic_channel },
+					{ name: "planned_channel", value: channels.planned_channel },
 				)
 		)
 		// Alt Title
@@ -52,6 +53,13 @@ module.exports = {
 				.setName("type")
 				.setDescription("Rodzaj")
 				.setRequired(true)
+				.addChoices(
+					{ name: "Manga", value: "Manga" },
+					{ name: "Manhwa", value: "Manhwa" },
+					{ name: "Manhua", value: "Manhua" },
+					{ name: "Webtoon", value: "Webtoon" },
+					{ name: "B/D", value: "B/D" },
+				)
 		)
 		// Genre
 		.addStringOption((option) =>

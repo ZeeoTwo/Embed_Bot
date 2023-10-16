@@ -8,7 +8,8 @@
         "oneshot_channel" : "Channel ID",
         "invite_channel" : "Channel ID",
         "finished_channel" : "Channel ID",
-        "lic_channel" : "Channel ID"
+        "lic_channel" : "Channel ID",
+        "planned_channel" : "Channel ID"
     },
     "role_id" : "ID OF ROLE WHICH CAN USE BOT COMMANDS"
 }

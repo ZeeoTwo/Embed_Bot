@@ -15,7 +15,7 @@ module.exports = {
 		.addStringOption((option) =>
 			option
 				.setName("channel_id")
-				.setDescription("ID of the channel you want to copy embed from")
+				.setDescription("ID of the channel to which the emebed is to be sent")
 				.setRequired(true)
 		),
 	async execute(interaction) {
