@@ -4,7 +4,8 @@
   "description": "Discord Bot",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "node deploy-commands.js && node main.js"
   },
   "repository": {
     "type": "git",
