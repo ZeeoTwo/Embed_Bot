@@ -1,6 +1,5 @@
 # Embed_Bot
 
-
 Discord Bot for creating embeds containning general info of Manga or anime episodes.
 
 # Setup and Installation

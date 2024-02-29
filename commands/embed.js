@@ -12,11 +12,13 @@ module.exports = {
 				.setDescription("Kanał na który ma być wysłany embed")
 				.setRequired(true)
 				.addChoices(
-					{ name: "embed_channel", value: channels.embed_channel },
+					{ name: "active_manga_channel", value: channels.active_manga_channel },
 					{ name: "oneshot_channel", value: channels.oneshot_channel },
 					{ name: "finished_channel", value: channels.finished_channel },
 					{ name: "lic_channel", value: channels.lic_channel },
-					{ name: "planned_channel", value: channels.planned_channel },
+					{ name: "planned_manhwa_channel", value: channels.planned_manhwa_channel },
+					{ name: "planned_manga_channel", value: channels.planned_manga_channel }, 
+					{ name: "active_manhwa_channel", value: channels.active_manhwa_channel },
 				)
 		)
 		// Alt Title

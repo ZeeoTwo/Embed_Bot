@@ -4,12 +4,14 @@
     "token" : "Bot token",
     "channels": {
         "user_channel" : "Channel ID",
-        "embed_channel" : "Channel ID",
+        "active_manga_channel" : "Channel ID",
+        "active_manhwa_channel": "Channel ID",
         "oneshot_channel" : "Channel ID",
         "invite_channel" : "Channel ID",
         "finished_channel" : "Channel ID",
         "lic_channel" : "Channel ID",
-        "planned_channel" : "Channel ID"
+        "planned_manga_channel" : "Channel ID",
+        "planned_manhwa_channel": "Channel ID"
     },
     "role_id" : "ID OF ROLE WHICH CAN USE BOT COMMANDS"
 }
