@@ -142,7 +142,7 @@ module.exports = {
 			.addFields(
 				{ name: "Autor", value: e_author, inline: true },
 				{ name: "Data wydania", value: e_release_date.toString(), inline: true },
-				{ name: "Liczba tomów", value: e_volumes, inline: true },
+				{ name: "Status", value: e_volumes, inline: true },
 				{ name: "Rodzaj", value: e_type, inline: true },
 				{ name: "Gatunek", value: e_genre, inline: true },
 				{ name: "Wasza ocena", value: e_opinion, inline: true },
